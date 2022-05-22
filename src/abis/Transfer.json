@@ -28,14 +28,14 @@
     "absolutePath": "/C/Users/Dev Prajapat/Documents/Git projects/BlockChain-Auctioning-Web-App/src/contracts/Transfer.sol",
     "exportedSymbols": {
       "Transfer": [
-        578
+        602
       ]
     },
-    "id": 579,
+    "id": 603,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 574,
+        "id": 598,
         "literals": [
           "solidity",
           "^",
@@ -51,19 +51,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 578,
+        "id": 602,
         "linearizedBaseContracts": [
-          578
+          602
         ],
         "name": "Transfer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 577,
+            "id": 601,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 578,
+            "scope": 602,
             "src": "53:40:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -72,7 +72,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 575,
+              "id": 599,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "53:6:2",
@@ -84,7 +84,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "5472616e7366657220636f6e7472616374",
-              "id": 576,
+              "id": 600,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -102,7 +102,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 579,
+        "scope": 603,
         "src": "28:69:2"
       }
     ],
@@ -112,14 +112,14 @@
     "absolutePath": "/C/Users/Dev Prajapat/Documents/Git projects/BlockChain-Auctioning-Web-App/src/contracts/Transfer.sol",
     "exportedSymbols": {
       "Transfer": [
-        578
+        602
       ]
     },
-    "id": 579,
+    "id": 603,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 574,
+        "id": 598,
         "literals": [
           "solidity",
           "^",
@@ -135,19 +135,19 @@
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 578,
+        "id": 602,
         "linearizedBaseContracts": [
-          578
+          602
         ],
         "name": "Transfer",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 577,
+            "id": 601,
             "name": "name",
             "nodeType": "VariableDeclaration",
-            "scope": 578,
+            "scope": 602,
             "src": "53:40:2",
             "stateVariable": true,
             "storageLocation": "default",
@@ -156,7 +156,7 @@
               "typeString": "string"
             },
             "typeName": {
-              "id": 575,
+              "id": 599,
               "name": "string",
               "nodeType": "ElementaryTypeName",
               "src": "53:6:2",
@@ -168,7 +168,7 @@
             "value": {
               "argumentTypes": null,
               "hexValue": "5472616e7366657220636f6e7472616374",
-              "id": 576,
+              "id": 600,
               "isConstant": false,
               "isLValue": false,
               "isPure": true,
@@ -186,7 +186,7 @@
             "visibility": "public"
           }
         ],
-        "scope": 579,
+        "scope": 603,
         "src": "28:69:2"
       }
     ],
@@ -200,12 +200,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xac5866b8f08d3Df5a189f1A9264e8BBd2156C7E2",
-      "transactionHash": "0xc8671017da7a9c286ddbef2c265344a8168c205a58f8a9b81f77df5f2824a914"
+      "address": "0xbecae50AD0d3bF41F01eb0d0Ab89d37D3F305f2c",
+      "transactionHash": "0x6e275b34c92aea8493a74dca7234f3f0d201ce201bd13028acb840e0a8bf2da8"
     }
   },
   "schemaVersion": "3.0.23",
-  "updatedAt": "2022-05-22T15:26:35.119Z",
+  "updatedAt": "2022-05-22T15:43:35.631Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

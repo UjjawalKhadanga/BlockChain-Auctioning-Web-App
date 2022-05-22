@@ -20,9 +20,22 @@ class App extends Component {
     this.setState({balance: currBalance});
     
     const itemdata = new web3.eth.Contract(ItemData.abi, ItemData.networks['5777'].address);
-    const item_count = await itemdata.methods.getItemName(0).call();
-    this.setState({item_count});
-    console.log(this.state.item_count);
+    for(var i=0; i<4; i++){
+      const item_name = await itemdata.methods.getItemName(i).call();
+      const item_desc = await itemdata.methods.getItemDesc(i).call();
+      const item_price = await itemdata.methods.getItemPrice(i).call();
+      const item_increment = await itemdata.methods.getItemIncrement(i).call();
+      this.state.itemList.push(
+        {
+          item_name: item_name, 
+          item_desc: item_desc, 
+          item_price: item_price, 
+          item_increment: item_increment
+        }
+      );
+    }
+    
+    console.log(this.state.itemList);
   }
 
   async loadWeb3(){
@@ -45,6 +58,8 @@ class App extends Component {
       item_count: ""
     }
   }
+
+  
 
   render() {
     return (
