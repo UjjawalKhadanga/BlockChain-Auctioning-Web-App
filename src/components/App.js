@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import Web3 from 'web3';
+import Transfer from '../abis/Transfer.json';
+import ItemData from '../abis/ItemData.json'
+import ItemList from './ItemList';
 
 class App extends Component {
 
@@ -12,19 +15,34 @@ class App extends Component {
   async loadBlockchain(){
     const web3 = window.web3;
     const accounts = await web3.eth.getAccounts();
-    console.log(accounts);
+    this.setState({account: accounts[0]});
+    const currBalance = await web3.eth.getBalance(accounts[0]);
+    this.setState({balance: currBalance});
+    
+    const itemdata = new web3.eth.Contract(ItemData.abi, ItemData.networks['5777'].address);
+    const item_count = await itemdata.methods.getItemName(0).call();
+    this.setState({item_count});
+    console.log(this.state.item_count);
   }
 
   async loadWeb3(){
     if(window.etherium){
       window.web3 = new Web3(window.etherium);
       await window.etherium.enable();
-      console.log('aaaa');
     }else if(window.web3){
       window.web3 = new Web3(window.web3.currentProvider);
-      console.log('bbbb');
     }else{
       window.alert("Etherium browser not deteted");
+    }
+  }
+
+  constructor(props){
+    super(props);
+    this.state = {
+      account: "",
+      balance: 0,
+      itemList: [],
+      item_count: ""
     }
   }
 
@@ -46,10 +64,16 @@ class App extends Component {
             <main role="main" className="col-lg-12 d-flex text-center">
               <div className="content mr-auto ml-auto">
                 
-                <h1>Dapp University</h1>
+                <h1>{this.state.account}</h1>
+
+                
                
               </div>
+              
             </main>
+            <div>
+              <ItemList />
+            </div>
           </div>
         </div>
       </div>
