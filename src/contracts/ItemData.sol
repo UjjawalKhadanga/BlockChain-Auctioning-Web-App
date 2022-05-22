@@ -43,9 +43,6 @@ contract ItemData {
 		itemId ++;
 	}
 
-    // function getItemList () public view returns (Item[] memory) {
-    //     return items;
-    // }
 
 	// Function to get item count
 	function getItemCount () public pure returns (uint) {
@@ -60,6 +57,11 @@ contract ItemData {
 		return items[_itemId].item_name;
 	}
 
+    function getItemDesc (uint _itemId) public view returns (string memory) {
+		require(_itemId >= 0 && _itemId < itemCount, "Item does not exist"); // the item id must be greater than 0 but less or equal to the total count
+
+		return items[_itemId].item_desc;
+	}
 
 	// Function to get the highest current price of an item using its item id
 	function getItemPrice (uint _itemId) public view returns (uint) {
